@@ -75,4 +75,20 @@ export class UsersComponent implements OnInit{
       }
     })
   }
+
+  onDeleteUser(id: number){
+
+    const isDelete = confirm("Are you sure you want to Delete User?");
+    if(isDelete){
+      this.masterServ.deleteUserById(id).subscribe((res:any)=>{
+        if(res.result){
+          alert("User Deleted Successfully!!");
+          this.loadUsers();
+        }else{
+          alert(res.message);
+        }
+      })
+    }
+    }
+    
 }

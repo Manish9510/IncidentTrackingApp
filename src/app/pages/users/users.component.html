@@ -24,7 +24,7 @@
                         <div class="col-md-6 ">
                             <label for="role" class="form-label">Role</label>
                             <select id="role" formControlName="role" class="form-select">
-                                <option value="Admin">Admin</option>
+                                <option value="Support Staff">Support Staff</option>
                                 <option value="User">User</option>
                             </select>
                         </div>
@@ -48,7 +48,7 @@
                                         <p>Username: {{item.userName}} </p>
                                     <div class="row">
                                         <div class="col-6">
-                                            <button class="btn btn-primary btn-sm">Delete</button>
+                                            <button class="btn btn-primary btn-sm" (click)="onDeleteUser(item.userId)">Delete</button>
                                         </div>
                                         <div class="col-6 btn-sm">
                                             <button class="btn btn-danger btn-sm" (click)="onEdit(item)">Edit</button>

@@ -29,6 +29,6 @@ export class MasterService {
   }
 
   deleteUserById(id: number){
-    return this.http.delete(`${this.apiUrl}DeleteUserByUserId?userId=i${id}`); //using Template Literals
+    return this.http.delete(`${this.apiUrl}DeleteUserByUserId?userId=${id}`); //using Template Literals
   }
 }
